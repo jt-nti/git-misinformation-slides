@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" type="text/css" href="lib/css/gitgraph.css" />
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>Git Misinformation</h2>
+					<p>How to lose code and infuriate people</p>
+					<p>
+						<small><a href="https://github.com/jt-nti">James Taylor</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>This is not your first time</h2>
+					<p>You've already set everything up, e.g.</p>
+					<pre>
+						<code class="hljs lang-bash" data-trim contenteditable>
+							git config --global user.name "Block Norris"
+							git config --global user.email conga@example.org
+						</code>
+					</pre>
+					<p>
+						<small>If not...
+							<a href="https://www.git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Getting Started</a>
+						</small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Git is simple</h2>
+						<p>It's commits all the way down...</p>
+					</section>
+
+					<section>
+						<canvas id="gitCommitExample"></canvas>
+					</section>
+
+					<section>
+						<p>And branches...</p>
+					</section>
+
+					<section>
+						<canvas id="gitBranchExample"></canvas>
+					</section>
+
+					<section>
+						<p>And a HEAD...</p>
+					</section>
+
+					<section>
+						<canvas id="gitHeadExample"></canvas>
+					</section>
+
+					<section>
+						<p>(Which can become detached!)</p>
+					</section>
+
+					<section>
+						<canvas id="gitDetatchedHeadExample"></canvas>
+					</section>
+
+					<section>
+						<p>You can also tag things...</p>
+					</section>
+
+					<section>
+						<canvas id="gitTagExample"></canvas>
+					</section>
+
+					<section>
+						<p>Simple!</p>
+					</section>
+
+					<section>
+						<p>But... other people!</p>
+						<p style="font-size: 4em;">🐧 🐧 🐧</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Git is distributed</h2>
+						<p>But this is pretty common...</p>
+					</section>
+
+					<section>
+						<h2>upstream repository</h2>
+						<p style="font-size: 4em;">🚀</p>
+						<p>Which you fork...</p>
+					</section>
+
+					<section>
+						<h2>origin repository</h2>
+						<p style="font-size: 4em;">🛰</p>
+						<p>Which you clone...</p>
+					</section>
+
+					<section>
+						<h2>local repository</h2>
+						<p style="font-size: 4em;">💻</p>
+						<p>Which you swear at!</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Time to get to work!</h2>
+						<p>That freshly cloned repository isn't going to destroy itself!</p>
+					</section>
+
+					<section>
+						<canvas id="gitFullExample1"></canvas>
+					</section>
+
+					<section>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								git ...
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<canvas id="gitFullExample2"></canvas>
+					</section>
+				</section>
+
+				<section>
+					<h2>The End</h2>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="lib/js/gitgraph.min.js"></script>
+		<script src="js/gitExamples.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
