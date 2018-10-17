@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Git Misinformation</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -42,11 +42,7 @@
 							git config --global user.email conga@example.org
 						</code>
 					</pre>
-					<p>
-						<small>If not...
-							<a href="https://www.git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Getting Started</a>
-						</small>
-					</p>
+					<p><small><a href="https://www.git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Getting Started</a></small></p>
 				</section>
 
 				<section>
@@ -94,9 +90,104 @@
 					<section>
 						<p>Simple!</p>
 					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Time to code!</h2>
+						<p>Those bugs aren't going to write themselves...</p>
+					</section>
 
 					<section>
-						<p>But... other people!</p>
+						<canvas id="gitSoloExample1"></canvas>
+					</section>
+
+					<section>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git checkout -b pineapple
+								Switched to a new branch 'pineapple'
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<canvas id="gitSoloExample2"></canvas>
+					</section>
+
+					<section>
+						<pre>
+							<code class="hljs lang-js" data-trim contenteditable>
+								console.log("Unexpected pineapple");
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<canvas id="gitSoloExample3"></canvas>
+					</section>
+
+					<section>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git add -A
+								$ git commit -s -m "Add pineapple"
+								[pineapple 231525e] Add pineapple
+								1 file changed, 0 insertions(+), 0 deletions(-)
+								create mode 100644 pineapple.js
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<canvas id="gitSoloExample4"></canvas>
+					</section>
+
+					<section>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git checkout master
+								Switched to branch 'master'
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p style="font-size: 4em;">⏲</p>
+						<p>Time passes...</p>
+					</section>
+
+					<section>
+						<canvas id="gitSoloExample5"></canvas>
+					</section>
+
+					<section>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git merge pineapple
+								Merge made by the 'recursive' strategy.
+								 pineapple.js | 0
+								 1 file changed, 0 insertions(+), 0 deletions(-)
+								 create mode 100644 pineapple.js
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<canvas id="gitSoloExample6"></canvas>
+					</section>
+
+					<section>
+						<p>Simple...</p>
+						<p><small><a href="https://www.git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging">Basic Branching and Merging</a></small></p>
+					</section>
+
+					<section>
+						<p>...except when there are other people!</p>
 						<p style="font-size: 4em;">🐧 🐧 🐧</p>
 					</section>
 				</section>
@@ -104,7 +195,7 @@
 				<section>
 					<section>
 						<h2>Git is distributed</h2>
-						<p>But this is pretty common...</p>
+						<p>Flexible, but this is pretty common...</p>
 					</section>
 
 					<section>
@@ -124,33 +215,241 @@
 						<p style="font-size: 4em;">💻</p>
 						<p>Which you swear at!</p>
 					</section>
-				</section>
-
-				<section>
-					<section>
-						<h2>Time to get to work!</h2>
-						<p>That freshly cloned repository isn't going to destroy itself!</p>
-					</section>
-
-					<section>
-						<canvas id="gitFullExample1"></canvas>
-					</section>
 
 					<section>
 						<pre>
 							<code class="hljs lang-bash" data-trim contenteditable>
-								git ...
+								$ git remote -v
+								origin	git@github.com:jthub/hyperledger-composer.git (fetch)
+								origin	git@github.com:jthub/hyperledger-composer.git (push)
+								sstone1	git@github.com:sstone1/composer.git (fetch)
+								sstone1	git@github.com:sstone1/composer.git (push)
+								upstream	git@github.com:hyperledger/composer.git (fetch)
+								upstream	git@github.com:hyperledger/composer.git (push)
+								$ _
+							</code>
+						</pre>
+						<p><small><a href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes">Working with Remotes</a></small></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Time to collaborate!</h2>
+						<p>Share all the bugs...</p>
+					</section>
+
+					<section>
+						<canvas id="gitTeamExample1"></canvas>
+					</section>
+					
+					<section>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git rebase master
+								First, rewinding head to replay your work on top of it...
+								Applying: Add pineapple
+								$ _
 							</code>
 						</pre>
 					</section>
 
 					<section>
-						<canvas id="gitFullExample2"></canvas>
+						<canvas id="gitTeamExample2"></canvas>
+					</section>
+
+					<section>
+						<p>No conflicts!</p>
+						<p style="font-size: 4em;">🎉</p>
+						<p>Except...</p>
+					</section>
+
+					<section>
+						<p>It's not the same commit!</p>
+						<p style="font-size: 4em;">🔥</p>
+						<p><small><a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History">Rewriting History</a></small></p>
+					</section>
+
+					<section>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git push --force-with-lease origin pineapple
+								Counting objects: 24, done.
+								Delta compression using up to 8 threads.
+								Compressing objects: 100% (15/15), done.
+								Writing objects: 100% (24/24), 1.91 KiB | 0 bytes/s, done.
+								Total 24 (delta 2), reused 0 (delta 0)
+								To https://github.com/jthub/hyperledger-composer
+									* [new branch]      pineapple -> pineapple
+								$ _
+							</code>
+						</pre>
+						<p><small><a href="https://www.git-scm.com/book/en/v2/Git-Branching-Remote-Branches">Remote Branches</a></small></p>
+					</section>
+
+					<section>
+						<p style="font-size: 4em;">⚠️</p>
+						<p>Don't force push to master!</p>
 					</section>
 				</section>
 
 				<section>
-					<h2>The End</h2>
+					<section>
+						<h2>Tips</h2>
+						<p>Get Tower...</p>
+					</section>
+
+					<section>
+						<p>Always start in a new branch</p>
+						<p><small>(Make sure it's based on an up-to-date master branch!)</small></p>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git status
+								On branch master
+								Your branch is up-to-date with 'origin/master'.
+
+								nothing to commit, working tree clean
+								$ git pull upstream master
+								remote: Enumerating objects: 56, done.
+								...
+								32 files changed, 123 insertions(+), 123 deletions(-)
+								$ git checkout -b pineapple
+								Switched to a new branch 'pineapple'
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p><i>git status</i> is your friend</p>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git status
+								On branch master
+								Your branch is ahead of 'origin/master' by 2 commits.
+									(use "git push" to publish your local commits)
+								
+								nothing to commit, working tree clean
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p><i>git log</i> is the enemy of your enemy</p>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git log -n 5 --oneline
+								2f07943c0 (HEAD -> master, upstream/master, add-migration) bump to version 0.20.3 (#4459)
+								3b9de768d (tag: v0.20.2) Add cloud wallet implementations to docker images (#4456)
+								860536f52 (origin/master, origin/HEAD) [Master] Add caveats/advisory for scope of generators (Angular/CLI) plus Multi-Org Fabric v1.2.1 update (#4451)
+								5e2abe271 [Master] Upgrade Shim (#4453)
+								f635247c3 [master] remove info about community calls (#4450)
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>One commit is usually plenty</p>
+						<p><small>(And much easier to rebase!)</small></p>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git commit --amend
+								[pineapple 0acce17] Add pineapple
+								 Date: Wed Oct 17 13:52:04 2018 +0100
+								 3 files changed, 0 insertions(+), 0 deletions(-)
+								 create mode 100644 ham.js
+								 create mode 100644 pineapple.js
+								 create mode 100644 pizza.js
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>Oh, you already have more than one commit...</p>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git log --oneline -n 4
+								c7005cd (HEAD -> pineapple) Code code code
+								475b463 Hacking is fun
+								f97caf5 Hack stuff
+								e62064c Initial commit
+								$ git rebase -i HEAD~3
+								...pick, squash, squash...
+								Successfully rebased and updated refs/heads/pineapple.
+								$ git log --oneline -n 2
+								64cbfb5 (HEAD -> pineapple) Add pineapple
+								e62064c Initial commit
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>Prefer commits to stashing</p>
+						<p>Only use <i>git stash</i> and <i>git apply</i> to move unfinished changes out of the way temporarily</p>
+						<p><small><a href="https://git-scm.com/book/en/v1/Git-Tools-Stashing">Stashing</a></small></p>
+					</section>
+
+					<section>
+						<p>If you're worried, create another branch!</p>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git checkout -b pineapple-backup
+								Switched to a new branch 'pineapple-backup' 
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>Don't panic!</p>
+						<p><small>Your changes are probably in a commit ...somewhere!</small></p>
+						<pre>
+							<code class="hljs lang-bash" data-trim contenteditable>
+								$ git reflog show -n 2
+								073d926 HEAD@{0}: commit (amend): Add pineapple
+								733da01 HEAD@{1}: commit: Add pineapple
+								$ git reset --soft HEAD@{1}								
+								$ _
+							</code>
+						</pre>
+					</section>
+					
+				</section>
+
+				<section>
+					<section>
+						<h2>Useful Tools</h2>
+						<p>Did I mention Tower?</p>
+					</section>
+
+					<section>
+						<ul>
+							<li><a href="https://www.git-tower.com/">Tower</a></li>
+							<li><a href="https://www.perforce.com/products/helix-core-apps/merge-diff-tool-p4merge">P4Merge</a></li>
+							<li><a href="https://gitlens.amod.io">GitLense (VSCode)</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Questions?</h2>
+						<p>Try here...</p>
+					</section>
+
+					<section>
+						<ul>
+							<li><a href="https://github.com/k88hudson/git-flight-rules">Git Flight Rules</a></li>
+							<li><a href="https://guides.github.com/introduction/git-handbook/">Git Handbook</a></li>
+							<li><a href="http://rogerdudler.github.io/git-guide/">Git Guide</a></li>
+							<li><a href="http://firstaidgit.io/#/">First Aid Git</a></li>
+							<li><a href="https://ohshitgit.com/">Oh shit, git!</a></li>
+						</ul>
+					</section>
 				</section>
 			</div>
 		</div>
