@@ -37,9 +37,10 @@
 					<h2>This is not your first time</h2>
 					<p>You've already set everything up, e.g.</p>
 					<pre>
-						<code class="hljs lang-bash" data-trim contenteditable>
-							git config --global user.name "Block Norris"
-							git config --global user.email conga@example.org
+						<code class="hljs shell" data-trim contenteditable>
+							$ git config --global user.name "Block Norris"
+							$ git config --global user.email conga@example.org
+							$ _
 						</code>
 					</pre>
 					<p><small><a href="https://www.git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">Getting Started</a></small></p>
@@ -104,7 +105,7 @@
 
 					<section>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git checkout -b pineapple
 								Switched to a new branch 'pineapple'
 								$ _
@@ -130,7 +131,7 @@
 
 					<section>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git add -A
 								$ git commit -s -m "Add pineapple"
 								[pineapple 231525e] Add pineapple
@@ -147,7 +148,7 @@
 
 					<section>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git checkout master
 								Switched to branch 'master'
 								$ _
@@ -166,7 +167,7 @@
 
 					<section>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git merge pineapple
 								Merge made by the 'recursive' strategy.
 								 pineapple.js | 0
@@ -218,14 +219,14 @@
 
 					<section>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git remote -v
-								origin	git@github.com:jthub/hyperledger-composer.git (fetch)
-								origin	git@github.com:jthub/hyperledger-composer.git (push)
-								sstone1	git@github.com:sstone1/composer.git (fetch)
-								sstone1	git@github.com:sstone1/composer.git (push)
-								upstream	git@github.com:hyperledger/composer.git (fetch)
-								upstream	git@github.com:hyperledger/composer.git (push)
+								origin  git@github.com:jthub/hyperledger-composer.git (fetch)
+								origin  git@github.com:jthub/hyperledger-composer.git (push)
+								sstone1 git@github.com:sstone1/composer.git (fetch)
+								sstone1 git@github.com:sstone1/composer.git (push)
+								upstream git@github.com:hyperledger/composer.git (fetch)
+								upstream git@github.com:hyperledger/composer.git (push)
 								$ _
 							</code>
 						</pre>
@@ -245,7 +246,7 @@
 					
 					<section>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git rebase master
 								First, rewinding head to replay your work on top of it...
 								Applying: Add pineapple
@@ -272,7 +273,7 @@
 
 					<section>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git push --force-with-lease origin pineapple
 								Counting objects: 24, done.
 								Delta compression using up to 8 threads.
@@ -303,7 +304,7 @@
 						<p>Always start in a new branch</p>
 						<p><small>(Make sure it's based on an up-to-date master branch!)</small></p>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git status
 								On branch master
 								Your branch is up-to-date with 'origin/master'.
@@ -323,7 +324,7 @@
 					<section>
 						<p><i>git status</i> is your friend</p>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git status
 								On branch master
 								Your branch is ahead of 'origin/master' by 2 commits.
@@ -338,7 +339,7 @@
 					<section>
 						<p><i>git log</i> is the enemy of your enemy</p>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git log -n 5 --oneline
 								2f07943c0 (HEAD -> master, upstream/master, add-migration) bump to version 0.20.3 (#4459)
 								3b9de768d (tag: v0.20.2) Add cloud wallet implementations to docker images (#4456)
@@ -354,7 +355,7 @@
 						<p>One commit is usually plenty</p>
 						<p><small>(And much easier to rebase!)</small></p>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git commit --amend
 								[pineapple 0acce17] Add pineapple
 								 Date: Wed Oct 17 13:52:04 2018 +0100
@@ -370,7 +371,7 @@
 					<section>
 						<p>Oh, you already have more than one commit...</p>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git log --oneline -n 4
 								c7005cd (HEAD -> pineapple) Code code code
 								475b463 Hacking is fun
@@ -396,7 +397,7 @@
 					<section>
 						<p>If you're worried, create another branch!</p>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git checkout -b pineapple-backup
 								Switched to a new branch 'pineapple-backup' 
 								$ _
@@ -408,7 +409,7 @@
 						<p>Don't panic!</p>
 						<p><small>Your changes are probably in a commit ...somewhere!</small></p>
 						<pre>
-							<code class="hljs lang-bash" data-trim contenteditable>
+							<code class="hljs shell" data-trim contenteditable>
 								$ git reflog show -n 2
 								073d926 HEAD@{0}: commit (amend): Add pineapple
 								733da01 HEAD@{1}: commit: Add pineapple
@@ -467,6 +468,7 @@
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
