@@ -301,8 +301,7 @@
 					</section>
 
 					<section>
-						<p>Always start in a new branch</p>
-						<p><small>(Make sure it's based on an up-to-date master branch!)</small></p>
+						<p>Always start in a new branch...<br /><small>and make sure it's based on the latest upstream master!</small></p>
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
 								$ git status
@@ -319,6 +318,8 @@
 								$ _
 							</code>
 						</pre>
+
+						<p><small><a href="https://git-scm.com/book/en/v1/Git-Branching-Remote-Branches">Remote Branches</a></small></p>
 					</section>
 
 					<section>
@@ -352,8 +353,7 @@
 					</section>
 
 					<section>
-						<p>One commit is usually plenty</p>
-						<p><small>(And much easier to rebase!)</small></p>
+						<p>One commit is usually plenty...<br /><small>and much easier to rebase!</small></p>
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
 								$ git commit --amend
@@ -389,8 +389,34 @@
 					</section>
 
 					<section>
-						<p>Prefer commits to stashing</p>
-						<p>Only use <i>git stash</i> and <i>git apply</i> to move unfinished changes out of the way temporarily</p>
+						<p>That's not my commit...<br /><small>its changes do not need amending!</small></p>
+						<pre>
+							<code class="hljs shell" data-trim contenteditable>
+								$ git commit --amend
+								Aborting commit due to empty commit message.
+								$ _
+							</code>
+						</pre>
+					</section>
+
+					<section>
+						<p>Prefer commits to stashing...<br /><small>unless it's something quick</small></p>
+						<pre>
+							<code class="hljs shell" data-trim contenteditable>
+								$ git stash
+								Saved working directory and index state WIP on pineapple: f96a461 Fix stuff
+								$ _
+								...
+								$ git stash apply
+								On branch pineapple
+								Changes to be committed:
+								 (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+								 new file:   upside-down-cake.js
+
+								$ _
+							</code>
+						</pre>
 						<p><small><a href="https://git-scm.com/book/en/v1/Git-Tools-Stashing">Stashing</a></small></p>
 					</section>
 
@@ -406,14 +432,33 @@
 					</section>
 
 					<section>
-						<p>Don't panic!</p>
-						<p><small>Your changes are probably in a commit ...somewhere!</small></p>
+						<p>Don't panic...<br /><small>your changes are probably somewhere!</small></p>
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
 								$ git reflog show -n 2
 								073d926 HEAD@{0}: commit (amend): Add pineapple
 								733da01 HEAD@{1}: commit: Add pineapple
-								$ git reset --soft HEAD@{1}								
+								$ git reset --soft HEAD@{1}
+								$ _
+							</code>
+						</pre>
+
+						<small><ul>
+							<li><code>HEAD~1</code></li>
+							<li><code>HEAD@{1}</code></li>
+							<li><code>64cbfb5</code></li>
+						</ul></small>
+					</section>
+
+					<section>
+						<p>Cherry pick for victory!</p>
+						<pre>
+							<code class="hljs shell" data-trim contenteditable>
+								$ git cherry-pick 073d926
+								[pineapple f96a461] Fix stuff
+								 Date: Wed Oct 17 11:47:37 2018 +0100
+								 1 file changed, 0 insertions(+), 0 deletions(-)
+								 create mode 100644 fix.txt
 								$ _
 							</code>
 						</pre>
@@ -449,6 +494,8 @@
 							<li><a href="http://rogerdudler.github.io/git-guide/">Git Guide</a></li>
 							<li><a href="http://firstaidgit.io/#/">First Aid Git</a></li>
 							<li><a href="https://ohshitgit.com/">Oh shit, git!</a></li>
+							<li><a href="http://justinhileman.info/article/git-pretty/">Git pretty</a></li>
+							<li><a href="https://services.github.com/on-demand/git-trouble/">Git Out Of Trouble</a></li>
 						</ul>
 					</section>
 				</section>
