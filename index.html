@@ -149,8 +149,8 @@
 					<section>
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
-								$ git checkout master
-								Switched to branch 'master'
+								$ git checkout main
+								Switched to branch 'main'
 								$ _
 							</code>
 						</pre>
@@ -247,7 +247,7 @@
 					<section>
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
-								$ git rebase master
+								$ git rebase main
 								First, rewinding head to replay your work on top of it...
 								Applying: Add pineapple
 								$ _
@@ -290,7 +290,7 @@
 
 					<section>
 						<p style="font-size: 4em;">⚠️</p>
-						<p>Don't force push to master!</p>
+						<p>Don't force push to main!</p>
 					</section>
 				</section>
 
@@ -301,15 +301,15 @@
 					</section>
 
 					<section>
-						<p>Always start in a new branch...<br /><small>and make sure it's based on the latest upstream master!</small></p>
+						<p>Always start in a new branch...<br /><small>and make sure it's based on the latest upstream main!</small></p>
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
 								$ git status
-								On branch master
-								Your branch is up-to-date with 'origin/master'.
+								On branch main
+								Your branch is up-to-date with 'origin/main'.
 
 								nothing to commit, working tree clean
-								$ git pull upstream master
+								$ git pull upstream main
 								remote: Enumerating objects: 56, done.
 								...
 								32 files changed, 123 insertions(+), 123 deletions(-)
@@ -327,8 +327,8 @@
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
 								$ git status
-								On branch master
-								Your branch is ahead of 'origin/master' by 2 commits.
+								On branch main
+								Your branch is ahead of 'origin/main' by 2 commits.
 									(use "git push" to publish your local commits)
 								
 								nothing to commit, working tree clean
@@ -342,11 +342,11 @@
 						<pre>
 							<code class="hljs shell" data-trim contenteditable>
 								$ git log -n 5 --oneline
-								2f07943c0 (HEAD -> master, upstream/master, add-migration) bump to version 0.20.3 (#4459)
+								2f07943c0 (HEAD -> main, upstream/main, add-migration) bump to version 0.20.3 (#4459)
 								3b9de768d (tag: v0.20.2) Add cloud wallet implementations to docker images (#4456)
-								860536f52 (origin/master, origin/HEAD) [Master] Add caveats/advisory for scope of generators (Angular/CLI) plus Multi-Org Fabric v1.2.1 update (#4451)
-								5e2abe271 [Master] Upgrade Shim (#4453)
-								f635247c3 [master] remove info about community calls (#4450)
+								860536f52 (origin/main, origin/HEAD) [Main] Add caveats/advisory for scope of generators (Angular/CLI) plus Multi-Org Fabric v1.2.1 update (#4451)
+								5e2abe271 [Main] Upgrade Shim (#4453)
+								f635247c3 [main] remove info about community calls (#4450)
 								$ _
 							</code>
 						</pre>

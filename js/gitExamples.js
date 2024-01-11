@@ -32,8 +32,8 @@ var gitCommitExample = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitCommitMaster = gitCommitExample.branch("master");
-gitCommitMaster.commit({commitDotText: 'C1'}).commit({commitDotText: 'C2'}).commit({commitDotText: 'C3'});
+var gitCommitMain = gitCommitExample.branch("main");
+gitCommitMain.commit({commitDotText: 'C1'}).commit({commitDotText: 'C2'}).commit({commitDotText: 'C3'});
 
 /*
  * Simple branch example
@@ -46,18 +46,18 @@ var gitBranchExample = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitBranchMaster = gitBranchExample.branch("master");
-gitBranchMaster.commit({commitDotText: 'C1'});
+var gitBranchMain = gitBranchExample.branch("main");
+gitBranchMain.commit({commitDotText: 'C1'});
 
-var gitBranchIco = gitBranchMaster.branch('much-ico');
+var gitBranchIco = gitBranchMain.branch('much-ico');
 gitBranchIco.commit({commitDotText: 'C2'});
-gitBranchMaster.commit({commitDotText: 'C3'});
+gitBranchMain.commit({commitDotText: 'C3'});
 gitBranchIco.commit({commitDotText: 'C4'});
 
-var gitBranchFixes = gitBranchMaster.branch('so-fixes');
-gitBranchMaster.commit({
+var gitBranchFixes = gitBranchMain.branch('so-fixes');
+gitBranchMain.commit({
   commitDotText: 'C5',
-  tag: 'master',
+  tag: 'main',
   displayTagBox: false
 });
 gitBranchFixes.commit({
@@ -91,16 +91,16 @@ var gitHeadExample = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitHeadMaster = gitHeadExample.branch("master");
-gitHeadMaster.commit({commitDotText: 'C1'});
+var gitHeadMain = gitHeadExample.branch("main");
+gitHeadMain.commit({commitDotText: 'C1'});
 
-var gitHeadIco = gitHeadMaster.branch('much-ico');
+var gitHeadIco = gitHeadMain.branch('much-ico');
 gitHeadIco.commit({commitDotText: 'C2'});
-gitHeadMaster.commit({commitDotText: 'C3'});
+gitHeadMain.commit({commitDotText: 'C3'});
 gitHeadIco.commit({commitDotText: 'C4'});
 
-var gitHeadFixes = gitHeadMaster.branch('so-fixes');
-gitHeadMaster.commit({commitDotText: 'C5'});
+var gitHeadFixes = gitHeadMain.branch('so-fixes');
+gitHeadMain.commit({commitDotText: 'C5'});
 gitHeadFixes.commit({commitDotText: 'C6'});
 
 var gitHeadWow = gitHeadIco.branch('wow');
@@ -126,20 +126,20 @@ var gitDetachedHeadExample = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitDetachedHeadMaster = gitDetachedHeadExample.branch("master");
-gitDetachedHeadMaster.commit({commitDotText: 'C1'});
+var gitDetachedHeadMain = gitDetachedHeadExample.branch("main");
+gitDetachedHeadMain.commit({commitDotText: 'C1'});
 
-var gitDetachedHeadIco = gitDetachedHeadMaster.branch('much-ico');
+var gitDetachedHeadIco = gitDetachedHeadMain.branch('much-ico');
 gitDetachedHeadIco.commit({
   commitDotText: 'C2',
   tagColor: '#FFFFFF',
   tag: 'HEAD'
 });
-gitDetachedHeadMaster.commit({commitDotText: 'C3'});
+gitDetachedHeadMain.commit({commitDotText: 'C3'});
 gitDetachedHeadIco.commit({commitDotText: 'C4'});
 
-var gitDetachedHeadFixes = gitDetachedHeadMaster.branch('so-fixes');
-gitDetachedHeadMaster.commit({commitDotText: 'C5'});
+var gitDetachedHeadFixes = gitDetachedHeadMain.branch('so-fixes');
+gitDetachedHeadMain.commit({commitDotText: 'C5'});
 gitDetachedHeadFixes.commit({commitDotText: 'C6'});
 
 var gitDetachedHeadWow = gitDetachedHeadIco.branch('wow');
@@ -159,19 +159,19 @@ var gitTagExample = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitTagMaster = gitTagExample.branch("master");
-gitTagMaster.commit({commitDotText: 'C1'});
+var gitTagMain = gitTagExample.branch("main");
+gitTagMain.commit({commitDotText: 'C1'});
 
-var gitTagIco = gitTagMaster.branch('much-ico');
+var gitTagIco = gitTagMain.branch('much-ico');
 gitTagIco.commit({commitDotText: 'C2'});
-gitTagMaster.commit({
+gitTagMain.commit({
   commitDotText: 'C3',
   tag: 'v1.0'
 });
 gitTagIco.commit({commitDotText: 'C4'});
 
-var gitTagFixes = gitTagMaster.branch('so-fixes');
-gitTagMaster.commit({commitDotText: 'C5'});
+var gitTagFixes = gitTagMain.branch('so-fixes');
+gitTagMain.commit({commitDotText: 'C5'});
 gitTagFixes.commit({commitDotText: 'C6'});
 
 var gitTagWow = gitTagIco.branch('wow');
@@ -191,8 +191,8 @@ var gitSoloExample1 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitSoloMaster1 = gitSoloExample1.branch("master");
-gitSoloMaster1
+var gitSoloMain1 = gitSoloExample1.branch("main");
+gitSoloMain1
   .commit({
     message: 'Initial commit',
     sha1: 'ac0d89c'
@@ -206,7 +206,7 @@ gitSoloMaster1
   }).commit({
     message: 'Nick made me add tests!',
     sha1: 'fa54742',
-    tag: 'master',
+    tag: 'main',
     displayTagBox: false
   });
 
@@ -221,8 +221,8 @@ var gitSoloExample2 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitSoloMaster2 = gitSoloExample2.branch("master");
-gitSoloMaster2
+var gitSoloMain2 = gitSoloExample2.branch("main");
+gitSoloMain2
   .commit({
     message: 'Initial commit',
     sha1: 'ac0d89c'
@@ -252,8 +252,8 @@ var gitSoloExample3 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitSoloMaster3 = gitSoloExample3.branch("master");
-gitSoloMaster3
+var gitSoloMain3 = gitSoloExample3.branch("main");
+gitSoloMain3
   .commit({
     message: 'Initial commit',
     sha1: 'ac0d89c'
@@ -283,8 +283,8 @@ var gitSoloExample4 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitSoloMaster4 = gitSoloExample4.branch("master");
-gitSoloMaster4
+var gitSoloMain4 = gitSoloExample4.branch("main");
+gitSoloMain4
   .commit({
     message: 'Add code',
     sha1: '0e2bac0'
@@ -296,7 +296,7 @@ gitSoloMaster4
     sha1: 'fa54742'
   });
 
-var gitSoloBranch4 = gitSoloMaster4.branch('pineapple');
+var gitSoloBranch4 = gitSoloMain4.branch('pineapple');
 gitSoloBranch4.commit({
   message: 'Add pineapple',
   sha1: '231525e',
@@ -315,8 +315,8 @@ var gitSoloExample5 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitSoloMaster5 = gitSoloExample5.branch("master");
-gitSoloMaster5
+var gitSoloMain5 = gitSoloExample5.branch("main");
+gitSoloMain5
   .commit({
     message: 'Add moar code',
     sha1: '03b29cf'
@@ -325,16 +325,16 @@ gitSoloMaster5
     sha1: 'fa54742'
   });
 
-var gitSoloBranch5 = gitSoloMaster5.branch('pineapple');
+var gitSoloBranch5 = gitSoloMain5.branch('pineapple');
 gitSoloBranch5.commit({
   message: 'Add pineapple',
   sha1: '231525e'
 });
 
-gitSoloMaster5.commit({
+gitSoloMain5.commit({
   message: 'Fix tests!',
   sha1: '733138e',
-  tag: 'master',
+  tag: 'main',
   displayTagBox: false
 });
 
@@ -349,28 +349,28 @@ var gitSoloExample6 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitSoloMaster6 = gitSoloExample6.branch("master");
-gitSoloMaster6
+var gitSoloMain6 = gitSoloExample6.branch("main");
+gitSoloMain6
   .commit({
     message: 'Nick made me add tests!',
     sha1: 'fa54742'
   });
 
-var gitSoloBranch6 = gitSoloMaster6.branch('pineapple');
+var gitSoloBranch6 = gitSoloMain6.branch('pineapple');
 gitSoloBranch6.commit({
   message: 'Add pineapple',
   sha1: '231525e'
 });
 
-gitSoloMaster6.commit({
+gitSoloMain6.commit({
   message: 'Fix tests!',
   sha1: '733138e'
 });
 
-gitSoloBranch6.merge(gitSoloMaster6, {
+gitSoloBranch6.merge(gitSoloMain6, {
   message: 'Merge branch \'pineapple\'',
   sha1: '972a3fa',
-  tag: 'master',
+  tag: 'main',
   displayTagBox: false
 });
 
@@ -385,13 +385,13 @@ var gitTeamExample1 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitTeamMaster1 = gitTeamExample1.branch("master");
-gitTeamMaster1.commit({
+var gitTeamMain1 = gitTeamExample1.branch("main");
+gitTeamMain1.commit({
     message: 'Nick made me add tests!',
     sha1: 'fa54742'
   });
 
-var gitTeamBranch1 = gitTeamMaster1.branch('pineapple');
+var gitTeamBranch1 = gitTeamMain1.branch('pineapple');
 gitTeamBranch1.commit({
   message: 'Add pineapple',
   sha1: '231525e',
@@ -399,7 +399,7 @@ gitTeamBranch1.commit({
   displayTagBox: false
 });
 
-gitTeamMaster1
+gitTeamMain1
   .commit({
     message: 'Fix tests!',
     sha1: '733138e'
@@ -419,8 +419,8 @@ var gitTeamExample2 = new GitGraph({
   author: 'Block Norris <conga@example.org>'
 });
 
-var gitTeamMaster2 = gitTeamExample2.branch("master");
-gitTeamMaster2.commit({
+var gitTeamMain2 = gitTeamExample2.branch("main");
+gitTeamMain2.commit({
     message: 'Nick made me add tests!',
     sha1: 'fa54742'
   }).commit({
@@ -431,7 +431,7 @@ gitTeamMaster2.commit({
     sha1: '84a0d6a'
   });
 
-var gitTeamBranch2 = gitTeamMaster2.branch('pineapple');
+var gitTeamBranch2 = gitTeamMain2.branch('pineapple');
 gitTeamBranch2.commit({
   message: 'Add pineapple',
   sha1: 'a96c566',
